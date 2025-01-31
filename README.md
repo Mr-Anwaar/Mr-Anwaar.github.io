@@ -1,36 +1,65 @@
-# Jekyll-Uno with Projects as Timeline
-A Jekyll Theme, based on the Uno-Theme with a list of projects as Timeline.
+<h1 align="center">Hi, I'm Muhammad Anwaar👋</h1>
+<h3 align="center">AI Researcher | Data Scientist | Cybersecurity Enthusiast</h3>
 
-## How does is look
-[Demo](https://www.zuehlke.cloud/)
-![Screenshot](screenshot-overview.png)
-![jekyll-theme-desktop](https://user-images.githubusercontent.com/32843441/72224870-5451ff00-357f-11ea-8fc2-bfbd4499bc63.gif)
-![jekyll-theme-mobil](https://user-images.githubusercontent.com/32843441/72224877-6a5fbf80-357f-11ea-920b-dfae72bf2fbe.gif)
+---
 
-## Installation/Setup
-1. Download or clone repo `git clone https://github.com/tzuehlke/jekyll-uno-timeline.git`
-2. Enter the folder: `cd jekyll-uno-timeline/`
-3. Build it: `jekyll build`
-4. Start Jekyll server: `jekyll serve`
-5. Configure: `_config.yml`
-   * at least set `font_awesome` or download and add the font in `head.html`
+### 🔍 About Me  
 
-Access via: [http://localhost:4000/](http://localhost:4000/)
+I am a **data scientist and AI researcher** driven by a passion for applying **machine learning and deep learning** to solve real-world challenges. My expertise spans **natural language processing (NLP), network security, and predictive modeling**, with a strong foundation in both **research and industry applications**. I thrive on transforming complex data into actionable insights and building intelligent systems that drive innovation.  
 
-## Details/Features/Changes
-* based on the [Uno-Theme](https://github.com/joshgerdes/jekyll-uno), but:
-  * removed everything with posts
-  * `content-wrapper` can be shown or hidden with button
-  * changed all icons to [Font-Awesome](https://fontawesome.com/)
-  * updated google-analytics snipped
-  * added [Meetup-Link](https://www.meetup.com/)
-  * removed RSS
-  * removed Disqus
-  * using a Timeline-Design instead of posts, therefore no pagination anymore
-* using Timeline ([CSS](https://github.com/le4ker/personal-jekyll-theme/blob/master/css/timeline.scss), [HTML](https://github.com/le4ker/personal-jekyll-theme/blob/master/_includes/timeline.html) ) from [{ Personal } Jekyll Theme](https://github.com/le4ker/personal-jekyll-theme) for a list of projects, but:
-  * still with 3 layouts for different screen-width, but without images on small screens
-  * timeline information source is now `_data/projects.yaml`
-  * always using the `timeline-inverted`-class, for text on the right side of the images
-* using [github_api.js](https://github.com/jarrekk/Jalpc/blob/master/static/js/github_api.js) from [Jalpc.](https://github.com/jarrekk/Jalpc), but:
-  * changed the GitHub-URL for using with persons and organisations
-  * added watchers number
+🏦 **Research Internship at BUPT** – AI  
+📝 **Deep Learning Specialization – DeepLearning.AI**  
+💡 **Expertise in Machine Learning, NLP, and Computer Vision**  
+
+I am always eager to explore cutting-edge AI solutions and contribute to innovative projects.
+
+---
+
+### 💡 Expertise  
+
+- **Artificial Intelligence & Machine Learning**: Supervised & Unsupervised Learning, Deep Learning, NLP, Computer Vision  
+- **Cybersecurity & Network Analysis**: Anomaly Detection, Intrusion Detection, Threat Analysis  
+- **Data Science & Analytics**: Feature Engineering, Predictive Modeling, Statistical Analysis  
+- **Tech Stack**:  
+  ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+  ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)
+  ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat&logo=pytorch&logoColor=white)
+  ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)
+  ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=mysql&logoColor=white)
+  ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+  ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
+
+---
+
+### 🚀 Featured Projects  
+
+📌 **[Network Traffic Analysis](https://github.com/yourusername/network-analysis)** – Cybersecurity project analyzing **malicious traffic patterns**.  
+📌 **[ECG Classification](https://github.com/yourusername/ecg-classification)** – Deep learning-based **arrhythmia detection** using PTB-XL.  
+📌 **[Resource Allocation Model](https://github.com/yourusername/resource-allocation)** – ML-based **optimization for network resources**.  
+
+🛠️ Explore more of my work **[here](https://github.com/yourusername?tab=repositories)**.  
+
+---
+
+### 📊 GitHub Stats  
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=yourusername&show_icons=true&theme=github_dark&hide_border=true" width="49%">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=yourusername&theme=github-dark-blue&hide_border=true" width="49%">
+</p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yourusername&layout=compact&theme=github_dark&hide_border=true" width="49%">
+</p>
+
+---
+
+### 💌 Connect with Me  
+
+📧 **Email**: [your.email@example.com](mailto:your.email@example.com)  
+🌟 **LinkedIn**: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
+
+🌍 **Website**: [yourportfolio.com](https://yourportfolio.com) _(if applicable)_  
+
+---
+
+🌟 **"Transforming Data into Intelligence!"** 🚀  
