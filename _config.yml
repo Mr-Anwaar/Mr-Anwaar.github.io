@@ -6,7 +6,7 @@ baseurl: ''
 profilepic: '/images/32asq.jpeg'
 bkimage: '/images/bk4.jpg'
 google_analytics: UA-XXXXXX-X
-font_awesome: '<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>'
+font_awesome: '<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>'
 
 author:
   name: 'Muhammad Anwaar'
