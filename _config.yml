@@ -1,0 +1,37 @@
+# Site settings
+title: Muhammad Anwaar
+description: 'Business Card Page'
+url: 'https://mr-anwaar.github.io'
+baseurl: ''
+profilepic: '/images/32asq.jpeg'
+bkimage: '/images/bk4.jpg'
+google_analytics: UA-XXXXXX-X
+font_awesome: 'XXXXXXXXXX.js'
+
+author:
+  name: 'Muhammad Anwaar'
+  email: MuhammadAnwaarsadiq@gmail.com
+#  mastodon: tzuehlke@mstdn.social
+# twitter_username: thomzuehlke
+#  facebook_username: joshgerdes
+  github_username:  Mr-Anwaar
+  linkedin_username:  muhammad-anwaar-7a1221214
+#  meetup_name:
+
+# Build settings
+destination: _site
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+#plugins: ['jekyll-paginate']
+exclude: ['README.md', 'screenshot-overview.png']
