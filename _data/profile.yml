@@ -1,0 +1,56 @@
+# _data/profile.yml
+
+education:
+  - degree: B.Sc. in Software Engineering
+    institution: University Of Kotli Azad Jammu Kashmir
+    year: 2019 - 2023
+    details: Graduated with a CGPA of 3.54/4.00. Final-year project focused on SmartSync.
+
+experience:
+  - title: Lecturer — Software Engineering Department
+    organization: University Of Kotli Azad Jammu Kashmir
+    period: Sep 2024 – Present
+    responsibilities:
+      - Teaching courses: Cloud Computing, Software Engineering, Cloud Scalable System Design, and Best Engineering Practices.
+      - Guiding students in applying theoretical knowledge to real-world systems.
+      - Enhancing curriculum with AI and data-driven components.
+
+  - title: Research Intern
+    organization: Beijing University of Posts and Telecommunications (BUPT)
+    period: 2022
+    responsibilities:
+      - Conducted research on various classfication , Segmentation and transformer architecture.
+      - Developed data pipelines and preprocessing methods.
+      - Received a recommendation letter for outstanding performance.
+
+certifications:
+  - title: Deep Learning Specialization
+    issuer: DeepLearning.AI (Coursera)
+    year: 2023
+    description: Completed 5-course specialization covering CNNs, RNNs, and sequence models.
+
+  - title: Natural Language Processing Specialization
+    issuer: Coursera
+    year: 2023
+    description: Covered text preprocessing, embeddings, and transformer architectures.
+
+  - title: Cloud Computing Foundations
+    issuer: Coursera
+    year: 2024
+    description: Learned scalable system design and best engineering practices.
+
+publications:
+  - title: Optimizing Retinal Vessel Segmentation Performance through a Systematic Comparison of Modified U-Net Variants
+    venue: Accepted at Conference for publication (2025)
+    link: coming soon
+    summary: Developed a U-Net–based deep learning framework for automated diabetic retinopathy detection using fundus images. Integrated EfficientNetB0, VGG19, DenseNet169, and ResNet152 encoders for optimized segmentation, achieving 98.6% accuracy and a Dice Score of 0.94. The model enhances diagnostic efficiency and supports AI-driven medical imaging in ophthalmology..
+
+    
+awards:
+  - title: Recommendation Letter from BUPT Supervisor
+    year: 2023
+    description: Recognized for excellence in data science research and project leadership.
+
+  - title: Lecturer Recognition Award
+    year: 2025
+    description: Honored for excellence in teaching and integrating AI concepts into core software engineering courses.
