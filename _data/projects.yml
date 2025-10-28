@@ -1,8 +1,8 @@
 # projects section data
-- name: A repo with workflow, that downloads the current Pay-As-You-Go prices from Azure once a month and saves them in ~40MB files
-  gh_user: Muhammad Anwaar
-  repo: AzurePAYGPrices
-  img: https://blog.zuehlke.cloud/wp-content/uploads/2024/04/AzureCostExportPAYG-Overview-945x293.png
+- name: Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection
+  gh_user: Mr-Anwaar
+  repo: Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection
+  img: https://github.com/Mr-Anwaar/Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection/blob/main/assets/Arial%20Image%20Segmentation%20.png
 
 - name: A regular rebuild and hosting of the TOR snowflake project (to provide access to censored websites)
   gh_user: Muhammad Anwaar
@@ -55,4 +55,5 @@
 - name: Face API
   gh_user: ArvatoSystems
   repo: FaceApiWPF
+
   img: https://raw.githubusercontent.com/ArvatoSystems/FaceApiWPF/master/FaceApiWPFScreenshot.png
