@@ -3,44 +3,141 @@ layout: default
 robots: noindex
 ---
 
-<!--<div class="main-post-list">-->
+<ul class="timeline">
 
-  <ul class="timeline">
-    
-    {% for project in site.data.projects %}
-
-      <li class="timeline-inverted">
-        <div class="timeline-image">
-          <img class="img-me" src="{{ project.img | prepend: site.baseurl }}" alt="">
-        </div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <h4><a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">{{ project.name }}</a></h4>
-          </div>
-          <div class="timeline-body">
-            {% if project.desc %}
-              {{ project.desc | markdownify }}
-            {% else %}
-            <div repotext="{{ project.repo }}">
-              <span class="desc"></div>
-            </div>
-            {% endif %}
-            <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn" style="margin-top: 10px;">
-              <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers"><i class="fa fa-star"></i><span class="star"> ...</span></a>&emsp;&emsp;
-              <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network"><i class="fa fa-code-fork"></i><span class="fork"> ...</span></a>&emsp;&emsp;
-              <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/watchers"><i class="far fa-eye"></i><span class="watchers"> ...</span></a>
-              <div style="height: 10px;"></div>
-          </div>
-        </div>
-      </li>
-    {% endfor %}
-    <!--
-    <li class="timeline-inverted">
-      <div class="timeline-image">
-        <img class="user-image" src="{{site.baseurl}}{{ site.timeline-img }}" alt="">
+  <!-- 🧩 PROJECTS SECTION -->
+  {% for project in site.data.projects %}
+  <li class="timeline-inverted">
+    <div class="timeline-image">
+      <img class="img-me" src="{{ project.img | prepend: site.baseurl }}" alt="">
+    </div>
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4>
+          <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">
+            {{ project.name }}
+          </a>
+        </h4>
       </div>
-    </li> -->
-  </ul>
+      <div class="timeline-body">
+        {% if project.desc %}
+          {{ project.desc | markdownify }}
+        {% else %}
+          <div repotext="{{ project.repo }}">
+            <span class="desc"></span>
+          </div>
+        {% endif %}
+        <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn" style="margin-top: 10px;">
+          <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers">
+            <i class="fa fa-star"></i><span class="star"> ...</span>
+          </a>&emsp;&emsp;
+          <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network">
+            <i class="fa fa-code-fork"></i><span class="fork"> ...</span>
+          </a>&emsp;&emsp;
+          <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/watchers">
+            <i class="far fa-eye"></i><span class="watchers"> ...</span>
+          </a>
+          <div style="height: 10px;"></div>
+        </div>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
 
-<!--</div>-->
+  <!-- 🎓 EDUCATION SECTION -->
+  {% for edu in site.data.profile.education %}
+  <li>
+    <div class="timeline-image">
+      <i class="fa-solid fa-graduation-cap fa-3x" style="color: white; padding-top: 25px;"></i>
+    </div>
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4>{{ edu.degree }}</h4>
+        <h5>{{ edu.institution }} ({{ edu.year }})</h5>
+      </div>
+      <div class="timeline-body">
+        <p>{{ edu.details }}</p>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
 
+  <!-- 💼 EXPERIENCE SECTION -->
+  {% for exp in site.data.profile.experience %}
+  <li class="timeline-inverted">
+    <div class="timeline-image">
+      <i class="fa-solid fa-briefcase fa-3x" style="color: white; padding-top: 25px;"></i>
+    </div>
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4>{{ exp.title }}</h4>
+        <h5>{{ exp.organization }} ({{ exp.period }})</h5>
+      </div>
+      <div class="timeline-body">
+        <ul>
+          {% for res in exp.responsibilities %}
+          <li>{{ res }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+
+  <!-- 🧾 CERTIFICATIONS -->
+  {% for cert in site.data.profile.certifications %}
+  <li>
+    <div class="timeline-image">
+      <i class="fa-solid fa-certificate fa-3x" style="color: white; padding-top: 25px;"></i>
+    </div>
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4>{{ cert.title }}</h4>
+        <h5>{{ cert.issuer }} ({{ cert.year }})</h5>
+      </div>
+      <div class="timeline-body">
+        <p>{{ cert.description }}</p>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+
+  <!-- 📚 PUBLICATIONS -->
+  {% for pub in site.data.profile.publications %}
+  <li class="timeline-inverted">
+    <div class="timeline-image">
+      <i class="fa-solid fa-book-open fa-3x" style="color: white; padding-top: 25px;"></i>
+    </div>
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4>{{ pub.title }}</h4>
+        <h5>{{ pub.venue }}</h5>
+      </div>
+      <div class="timeline-body">
+        <p>{{ pub.summary }}</p>
+        {% if pub.link %}
+        <p><a href="{{ pub.link }}" target="_blank">View Paper</a></p>
+        {% endif %}
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+
+  <!-- 🏆 AWARDS -->
+  {% for award in site.data.profile.awards %}
+  <li>
+    <div class="timeline-image">
+      <i class="fa-solid fa-trophy fa-3x" style="color: white; padding-top: 25px;"></i>
+    </div>
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4>{{ award.title }}</h4>
+        <h5>{{ award.year }}</h5>
+      </div>
+      <div class="timeline-body">
+        <p>{{ award.description }}</p>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+</ul>
