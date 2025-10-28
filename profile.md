@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Academic & Research Profile"
+permalink: /profile/
+---
+
 
 # Academic & Research Profile
 
