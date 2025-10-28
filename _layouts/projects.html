@@ -1,0 +1,144 @@
+---
+layout: default
+title: "Projects"
+permalink: /projects/
+---
+
+<ul class="timeline projects-timeline">
+
+  {% for project in site.data.projects %}
+  <li class="timeline-inverted project-card">
+    <div class="timeline-image">
+      <img class="img-me" src="{{ project.img | prepend: site.baseurl }}" alt="{{ project.name }}">
+    </div>
+
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h3 class="project-title">
+          <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">
+            {{ project.name }}
+          </a>
+        </h3>
+        {% if project.year %}
+        <p class="project-year">{{ project.year }}</p>
+        {% endif %}
+      </div>
+
+      <div class="timeline-body">
+        {% if project.desc %}
+          <p class="project-desc">{{ project.desc }}</p>
+        {% endif %}
+
+        <div class="project-links">
+          <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers" title="Stars">
+            <i class="fa fa-star"></i><span class="stat"> Stars</span>
+          </a>
+          <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network" title="Forks">
+            <i class="fa fa-code-fork"></i><span class="stat"> Forks</span>
+          </a>
+          <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/watchers" title="Watchers">
+            <i class="far fa-eye"></i><span class="stat"> Watchers</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+
+</ul>
+
+<style>
+/* ===== PROJECT TIMELINE PAGE ===== */
+.projects-timeline {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  list-style: none;
+}
+
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.timeline-image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.timeline-image img:hover {
+  transform: scale(1.05);
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #1d3557;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.project-year {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.project-links a {
+  display: inline-block;
+  color: #457b9d;
+  font-weight: 600;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+  color: #1d3557;
+}
+
+.project-links i {
+  margin-right: 5px;
+}
+
+/* === Responsive Breakpoints === */
+@media (max-width: 1440px) {
+  .projects-timeline { max-width: 1100px; }
+}
+
+@media (max-width: 1024px) {
+  .projects-timeline { max-width: 900px; }
+  .project-title { font-size: 1.3rem; }
+}
+
+@media (max-width: 768px) {
+  .projects-timeline { max-width: 700px; }
+  .timeline-image { width: 140px; height: 140px; }
+}
+
+@media (max-width: 480px) {
+  .projects-timeline { max-width: 95%; }
+  .timeline-image { width: 120px; height: 120px; }
+  .project-title { font-size: 1.1rem; }
+  .project-desc { font-size: 0.9rem; }
+}
+</style>
