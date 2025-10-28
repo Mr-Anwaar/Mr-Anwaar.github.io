@@ -5,24 +5,25 @@ permalink: /profile/
 ---
 
 <style>
-  /* Profile Page Styling */
+  /* === Base Styles === */
   .profile-page {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 2rem auto;
-    padding: 2rem;
+    padding: 2.5rem;
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     color: #333;
     font-family: "Inter", "Roboto", sans-serif;
     line-height: 1.6;
+    transition: all 0.3s ease;
   }
 
   .profile-page h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     text-align: center;
     color: #111;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .profile-page section {
@@ -32,12 +33,16 @@ permalink: /profile/
   }
 
   .profile-page h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
     color: #007acc;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+  }
+
+  .profile-page p {
+    margin-bottom: 0.8rem;
   }
 
   .profile-page ul {
@@ -60,6 +65,7 @@ permalink: /profile/
 
   .profile-page strong {
     color: #111;
+    font-weight: 600;
   }
 
   .profile-page em {
@@ -89,10 +95,65 @@ permalink: /profile/
     border-radius: 0;
   }
 
-  /* Responsive */
+  /* === Responsive Design === */
+  @media (max-width: 1024px) {
+    .profile-page {
+      padding: 2rem;
+    }
+
+    .profile-page h1 {
+      font-size: 2rem;
+    }
+
+    .profile-page h2 {
+      font-size: 1.4rem;
+    }
+  }
+
   @media (max-width: 768px) {
     .profile-page {
-      padding: 1.2rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+    }
+
+    .profile-page h1 {
+      font-size: 1.8rem;
+    }
+
+    .profile-page section {
+      padding-left: 1rem;
+      border-left: 3px solid #007acc;
+    }
+
+    .profile-page li {
+      padding: 0.9rem 1rem;
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .profile-page {
+      padding: 1rem;
+      box-shadow: none;
+    }
+
+    .profile-page h1 {
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .profile-page h2 {
+      font-size: 1.2rem;
+    }
+
+    .profile-page section {
+      border-left: 2px solid #007acc;
+      padding-left: 0.8rem;
+    }
+
+    .profile-page li {
+      font-size: 0.9rem;
+      padding: 0.8rem;
     }
   }
 </style>
@@ -117,17 +178,19 @@ permalink: /profile/
     <!-- Experience -->
     <section>
       <h2>💼 Experience</h2>
-      {% for exp in site.data.profile.experience %}
-        <li>
-          <strong>{{ exp.title }}</strong> — {{ exp.organization }}
-          <span style="color:#555;">({{ exp.period }})</span>
-          <ul>
-            {% for res in exp.responsibilities %}
-              <li>• {{ res }}</li>
-            {% endfor %}
-          </ul>
-        </li>
-      {% endfor %}
+      <ul>
+        {% for exp in site.data.profile.experience %}
+          <li>
+            <strong>{{ exp.title }}</strong> — {{ exp.organization }}
+            <span style="color:#555;">({{ exp.period }})</span>
+            <ul>
+              {% for res in exp.responsibilities %}
+                <li>• {{ res }}</li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
     </section>
 
     <!-- Certifications -->
