@@ -2,7 +2,7 @@
 - name: Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection
   gh_user: Mr-Anwaar
   repo: Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection
-  img: https://github.com/Mr-Anwaar/Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection/blob/main/assets/Arial%20Image%20Segmentation.png
+  img: https://github.com/Mr-Anwaar/Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection/blob/main/assets/Arial-Image-Segmentation.png
   
 - name: A regular rebuild and hosting of the TOR snowflake project (to provide access to censored websites)
   gh_user: Muhammad Anwaar
@@ -57,5 +57,6 @@
   repo: FaceApiWPF
 
   img: https://raw.githubusercontent.com/ArvatoSystems/FaceApiWPF/master/FaceApiWPFScreenshot.png
+
 
 
