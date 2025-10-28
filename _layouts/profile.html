@@ -4,64 +4,176 @@ title: "Academic & Research Profile"
 permalink: /profile/
 ---
 
-<div class="post">
-  <header class="post-header">
-    <h1 class="post-title">Academic & Research Profile</h1>
+<style>
+  /* Profile Page Styling */
+  .profile-page {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    color: #333;
+    font-family: "Inter", "Roboto", sans-serif;
+    line-height: 1.6;
+  }
+
+  .profile-page h1 {
+    font-size: 2.2rem;
+    text-align: center;
+    color: #111;
+    margin-bottom: 1.5rem;
+  }
+
+  .profile-page section {
+    margin-bottom: 2.5rem;
+    border-left: 4px solid #007acc;
+    padding-left: 1.2rem;
+  }
+
+  .profile-page h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #007acc;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .profile-page ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .profile-page li {
+    background: #f9fafb;
+    margin: 0.6rem 0;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .profile-page li:hover {
+    background: #eef6ff;
+    transform: translateY(-2px);
+  }
+
+  .profile-page strong {
+    color: #111;
+  }
+
+  .profile-page em {
+    color: #555;
+    display: block;
+    margin-top: 0.3rem;
+  }
+
+  .profile-page a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .profile-page a:hover {
+    text-decoration: underline;
+  }
+
+  .profile-page ul li ul {
+    margin-top: 0.5rem;
+  }
+
+  .profile-page ul li ul li {
+    background: none;
+    padding: 0;
+    margin: 0.3rem 0;
+    border-radius: 0;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .profile-page {
+      padding: 1.2rem;
+    }
+  }
+</style>
+
+<div class="profile-page">
+
+  <header>
+    <h1>📚 Academic & Research Profile</h1>
   </header>
 
-  <article class="post-content">
+  <article>
+    <!-- Education -->
     <section>
       <h2>🎓 Education</h2>
       {% for edu in site.data.profile.education %}
         <p><strong>{{ edu.degree }}</strong><br>
-        {{ edu.institution }} ({{ edu.year }})<br>
+        {{ edu.institution }} <span style="color:#555;">({{ edu.year }})</span><br>
         <em>{{ edu.details }}</em></p>
       {% endfor %}
     </section>
 
+    <!-- Experience -->
     <section>
       <h2>💼 Experience</h2>
       {% for exp in site.data.profile.experience %}
-        <p><strong>{{ exp.title }}</strong> — {{ exp.organization }} ({{ exp.period }})</p>
-        <ul>
-          {% for res in exp.responsibilities %}
-            <li>{{ res }}</li>
-          {% endfor %}
-        </ul>
+        <li>
+          <strong>{{ exp.title }}</strong> — {{ exp.organization }}
+          <span style="color:#555;">({{ exp.period }})</span>
+          <ul>
+            {% for res in exp.responsibilities %}
+              <li>• {{ res }}</li>
+            {% endfor %}
+          </ul>
+        </li>
       {% endfor %}
     </section>
 
+    <!-- Certifications -->
     <section>
       <h2>🏅 Certifications</h2>
       <ul>
         {% for cert in site.data.profile.certifications %}
-          <li><strong>{{ cert.title }}</strong> — {{ cert.issuer }} ({{ cert.year }})<br>
-          <em>{{ cert.description }}</em></li>
+          <li>
+            <strong>{{ cert.title }}</strong> — {{ cert.issuer }}
+            <span style="color:#555;">({{ cert.year }})</span>
+            <em>{{ cert.description }}</em>
+          </li>
         {% endfor %}
       </ul>
     </section>
 
+    <!-- Publications -->
     <section>
       <h2>🧠 Publications</h2>
       <ul>
         {% for pub in site.data.profile.publications %}
           <li>
             <strong>{{ pub.title }}</strong> — {{ pub.venue }}<br>
-            <a href="{{ pub.link }}" target="_blank">View Paper</a><br>
+            {% if pub.link != "coming soon" %}
+              <a href="{{ pub.link }}" target="_blank">🔗 View Paper</a><br>
+            {% else %}
+              <em>Link: coming soon</em><br>
+            {% endif %}
             <em>{{ pub.summary }}</em>
           </li>
         {% endfor %}
       </ul>
     </section>
 
+    <!-- Awards -->
     <section>
       <h2>🏆 Awards</h2>
       <ul>
         {% for award in site.data.profile.awards %}
-          <li><strong>{{ award.title }}</strong> ({{ award.year }})<br>
-          <em>{{ award.description }}</em></li>
+          <li>
+            <strong>{{ award.title }}</strong> <span style="color:#555;">({{ award.year }})</span>
+            <em>{{ award.description }}</em>
+          </li>
         {% endfor %}
       </ul>
     </section>
   </article>
+
 </div>
