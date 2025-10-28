@@ -5,7 +5,63 @@ robots: noindex
 
 <ul class="timeline">
 
-  <!-- 🧩 PROJECTS SECTION -->
+  <!-- Profile Section -->
+  <li class="timeline-inverted">
+    <div class="timeline-image">
+      <img class="img-me" src="{{ site.baseurl }}/assets/img/profile.png" alt="Profile Image">
+    </div>
+    <div class="timeline-panel">
+      <div class="timeline-heading">
+        <h4>Academic & Research Profile</h4>
+      </div>
+      <div class="timeline-body">
+
+        <h5>🎓 Education</h5>
+        {% for edu in site.data.profile.education %}
+          <p><strong>{{ edu.degree }}</strong> — {{ edu.institution }} ({{ edu.year }})<br>
+          <em>{{ edu.details }}</em></p>
+        {% endfor %}
+
+        <h5>💼 Experience</h5>
+        {% for exp in site.data.profile.experience %}
+          <p><strong>{{ exp.title }}</strong> — {{ exp.organization }} ({{ exp.period }})</p>
+          <ul>
+            {% for res in exp.responsibilities %}
+              <li>{{ res }}</li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+
+        <h5>🏅 Certifications</h5>
+        <ul>
+          {% for cert in site.data.profile.certifications %}
+            <li><strong>{{ cert.title }}</strong>, {{ cert.issuer }} ({{ cert.year }}) — {{ cert.description }}</li>
+          {% endfor %}
+        </ul>
+
+        <h5>🧠 Publications</h5>
+        <ul>
+          {% for pub in site.data.profile.publications %}
+            <li>
+              <strong>{{ pub.title }}</strong> — {{ pub.venue }}<br>
+              <a href="{{ pub.link }}" target="_blank">View Paper</a><br>
+              <em>{{ pub.summary }}</em>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <h5>🏆 Awards</h5>
+        <ul>
+          {% for award in site.data.profile.awards %}
+            <li><strong>{{ award.title }}</strong> ({{ award.year }}) — {{ award.description }}</li>
+          {% endfor %}
+        </ul>
+
+      </div>
+    </div>
+  </li>
+
+  <!-- Projects Section -->
   {% for project in site.data.projects %}
   <li class="timeline-inverted">
     <div class="timeline-image">
@@ -37,105 +93,7 @@ robots: noindex
           <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/watchers">
             <i class="far fa-eye"></i><span class="watchers"> ...</span>
           </a>
-          <div style="height: 10px;"></div>
         </div>
-      </div>
-    </div>
-  </li>
-  {% endfor %}
-
-  <!-- 🎓 EDUCATION SECTION -->
-  {% for edu in site.data.profile.education %}
-  <li>
-    <div class="timeline-image">
-      <i class="fa-solid fa-graduation-cap fa-3x" style="color: white; padding-top: 25px;"></i>
-    </div>
-    <div class="timeline-panel">
-      <div class="timeline-heading">
-        <h4>{{ edu.degree }}</h4>
-        <h5>{{ edu.institution }} ({{ edu.year }})</h5>
-      </div>
-      <div class="timeline-body">
-        <p>{{ edu.details }}</p>
-      </div>
-    </div>
-  </li>
-  {% endfor %}
-
-  <!-- 💼 EXPERIENCE SECTION -->
-  {% for exp in site.data.profile.experience %}
-  <li class="timeline-inverted">
-    <div class="timeline-image">
-      <i class="fa-solid fa-briefcase fa-3x" style="color: white; padding-top: 25px;"></i>
-    </div>
-    <div class="timeline-panel">
-      <div class="timeline-heading">
-        <h4>{{ exp.title }}</h4>
-        <h5>{{ exp.organization }} ({{ exp.period }})</h5>
-      </div>
-      <div class="timeline-body">
-        <ul>
-          {% for res in exp.responsibilities %}
-          <li>{{ res }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </li>
-  {% endfor %}
-
-  <!-- 🧾 CERTIFICATIONS -->
-  {% for cert in site.data.profile.certifications %}
-  <li>
-    <div class="timeline-image">
-      <i class="fa-solid fa-certificate fa-3x" style="color: white; padding-top: 25px;"></i>
-    </div>
-    <div class="timeline-panel">
-      <div class="timeline-heading">
-        <h4>{{ cert.title }}</h4>
-        <h5>{{ cert.issuer }} ({{ cert.year }})</h5>
-      </div>
-      <div class="timeline-body">
-        <p>{{ cert.description }}</p>
-      </div>
-    </div>
-  </li>
-  {% endfor %}
-
-  <!-- 📚 PUBLICATIONS -->
-  {% for pub in site.data.profile.publications %}
-  <li class="timeline-inverted">
-    <div class="timeline-image">
-      <i class="fa-solid fa-book-open fa-3x" style="color: white; padding-top: 25px;"></i>
-    </div>
-    <div class="timeline-panel">
-      <div class="timeline-heading">
-        <h4>{{ pub.title }}</h4>
-        <h5>{{ pub.venue }}</h5>
-      </div>
-      <div class="timeline-body">
-        <p>{{ pub.summary }}</p>
-        {% if pub.link %}
-        <p><a href="{{ pub.link }}" target="_blank">View Paper</a></p>
-        {% endif %}
-      </div>
-    </div>
-  </li>
-  {% endfor %}
-
-  <!-- 🏆 AWARDS -->
-  {% for award in site.data.profile.awards %}
-  <li>
-    <div class="timeline-image">
-      <i class="fa-solid fa-trophy fa-3x" style="color: white; padding-top: 25px;"></i>
-    </div>
-    <div class="timeline-panel">
-      <div class="timeline-heading">
-        <h4>{{ award.title }}</h4>
-        <h5>{{ award.year }}</h5>
-      </div>
-      <div class="timeline-body">
-        <p>{{ award.description }}</p>
       </div>
     </div>
   </li>
