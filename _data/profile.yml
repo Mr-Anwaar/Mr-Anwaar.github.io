@@ -2,32 +2,32 @@
 
 education:
   - degree: B.Sc. in Software Engineering
-    institution: University Of Kotli Azad Jammu Kashmir
-    year: 2019 - 2023
+    institution: University of Kotli Azad Jammu & Kashmir
+    year: 2019 – 2023
     details: Graduated with a CGPA of 3.54/4.00. Final-year project focused on SmartSync.
 
 experience:
   - title: Lecturer — Software Engineering Department
-    organization: University Of Kotli Azad Jammu Kashmir
+    organization: University of Kotli Azad Jammu & Kashmir
     period: Sep 2024 – Present
     responsibilities:
-      - Teaching courses: Cloud Computing, Software Engineering, Cloud Scalable System Design, and Best Engineering Practices.
-      - Guiding students in applying theoretical knowledge to real-world systems.
-      - Enhancing curriculum with AI and data-driven components.
+      - Teaching Cloud Computing, Software Engineering, Cloud Scalable System Design, and Best Engineering Practices.
+      - Guiding students to apply theory to real-world systems.
+      - Integrating AI and data-driven practices into the curriculum.
 
   - title: Research Intern
     organization: Beijing University of Posts and Telecommunications (BUPT)
     period: 2022
     responsibilities:
-      - Conducted research on various classfication , Segmentation and transformer architecture.
-      - Developed data pipelines and preprocessing methods.
+      - Conducted research on classification, segmentation, and transformer architectures.
+      - Developed data pipelines and preprocessing workflows.
       - Received a recommendation letter for outstanding performance.
 
 certifications:
   - title: Deep Learning Specialization
     issuer: DeepLearning.AI (Coursera)
     year: 2023
-    description: Completed 5-course specialization covering CNNs, RNNs, and sequence models.
+    description: Covered CNNs, RNNs, and sequence models in a 5-course specialization.
 
   - title: Natural Language Processing Specialization
     issuer: Coursera
@@ -40,17 +40,16 @@ certifications:
     description: Learned scalable system design and best engineering practices.
 
 publications:
-  - title: Optimizing Retinal Vessel Segmentation Performance through a Systematic Comparison of Modified U-Net Variants
-    venue: Accepted at Conference for publication (2025)
-    link: coming soon
-    summary: Developed a U-Net–based deep learning framework for automated diabetic retinopathy detection using fundus images. Integrated EfficientNetB0, VGG19, DenseNet169, and ResNet152 encoders for optimized segmentation, achieving 98.6% accuracy and a Dice Score of 0.94. The model enhances diagnostic efficiency and supports AI-driven medical imaging in ophthalmology..
+  - title: Optimizing Retinal Vessel Segmentation Performance through Modified U-Net Variants
+    venue: Accepted at Conference (2025)
+    link: "#"
+    summary: Built a deep learning framework for diabetic retinopathy detection using EfficientNetB0, VGG19, DenseNet169, and ResNet152 encoders — achieving 98.6% accuracy and 0.94 Dice score.
 
-    
 awards:
   - title: Recommendation Letter from BUPT Supervisor
     year: 2023
-    description: Recognized for excellence in data science research and project leadership.
+    description: Recognized for excellence in data science research and leadership.
 
   - title: Lecturer Recognition Award
     year: 2025
-    description: Honored for excellence in teaching and integrating AI concepts into core software engineering courses.
+    description: Honored for excellence in teaching and integrating AI concepts into Software Engineering.
