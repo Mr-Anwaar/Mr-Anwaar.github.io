@@ -4,6 +4,13 @@
   repo: Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection
   img: https://github.com/Mr-Anwaar/Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection/blob/main/assets/Arial-Image-Segmentation.png
   desc: "A PyTorch implementation of the U-Net architecture for semantic segmentation of roads in aerial imagery."
+  full_desc: >
+    This project demonstrates **aerial image segmentation using a U-Net architecture implemented in PyTorch**.
+    It aims to accurately detect **road networks** from aerial or satellite imagery, crucial for urban planning, autonomous navigation, and geospatial analysis.
+    Built as a portfolio project to showcase deep learning expertise in computer vision and semantic segmentation.
+    Utilized a subset of the Massachusetts Roads Dataset and achieved clear segmentation of road networks using Intersection over Union (IoU) and Dice Coefficient metrics.
+  technologies: "PyTorch, U-Net (Encoder-Decoder), NumPy, OpenCV, TorchVision, Matplotlib, Seaborn, Google Colab"
+  outcome: "Implemented U-Net for semantic segmentation, used real-world dataset (Massachusetts Roads), achieved clear road network segmentation."
 
 - name: A regular rebuild and hosting of the TOR snowflake project (to provide access to censored websites)
   gh_user: Muhammad Anwaar
