@@ -55,6 +55,19 @@ description: "Explore projects by Muhammad Anwaar, a Data Scientist and Software
     <h2 id="modal-title"></h2>
     <img id="modal-image" src="" alt="" style="width: 100%; max-height: 300px; object-fit: cover; margin-bottom: 15px;">
     <p id="modal-description"></p>
+    <!-- New sections for detailed info -->
+    <div id="modal-full-desc-section" style="display: none;">
+        <h3>Project Overview</h3>
+        <p id="modal-full-desc"></p>
+    </div>
+    <div id="modal-tech-section" style="display: none;">
+        <h3>Technologies Used</h3>
+        <p id="modal-technologies"></p>
+    </div>
+    <div id="modal-outcome-section" style="display: none;">
+        <h3>Outcome & Impact</h3>
+        <p id="modal-outcome"></p>
+    </div>
     <p><strong>Repository:</strong> <a id="modal-repo-link" href="#" target="_blank"></a></p>
   </div>
 </div>
@@ -208,6 +221,21 @@ description: "Explore projects by Muhammad Anwaar, a Data Scientist and Software
   color: #333;
   line-height: 1.6;
 }
+
+/* Styles for new modal sections */
+#modal-full-desc-section,
+#modal-tech-section,
+#modal-outcome-section {
+    margin-top: 15px;
+}
+
+#modal-full-desc-section h3,
+#modal-tech-section h3,
+#modal-outcome-section h3 {
+    color: #457b9d;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
 </style>
 
 <script>
@@ -217,6 +245,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalTitle = document.getElementById('modal-title');
     const modalImage = document.getElementById('modal-image');
     const modalDescription = document.getElementById('modal-description');
+    const modalFullDescSection = document.getElementById('modal-full-desc-section');
+    const modalFullDesc = document.getElementById('modal-full-desc');
+    const modalTechSection = document.getElementById('modal-tech-section');
+    const modalTechnologies = document.getElementById('modal-technologies');
+    const modalOutcomeSection = document.getElementById('modal-outcome-section');
+    const modalOutcome = document.getElementById('modal-outcome');
     const modalRepoLink = document.getElementById('modal-repo-link');
     const closeBtn = document.querySelector('.close');
 
@@ -230,9 +264,32 @@ document.addEventListener('DOMContentLoaded', function() {
                 modalTitle.textContent = proj.name;
                 modalImage.src = proj.img;
                 modalImage.alt = proj.name;
+                // Use the shorter description in the main body of the modal
                 modalDescription.textContent = proj.desc;
                 modalRepoLink.textContent = `https://github.com/${proj.gh_user}/${proj.repo}`;
                 modalRepoLink.href = `https://github.com/${proj.gh_user}/${proj.repo}`;
+
+                // Check for detailed fields and populate them if they exist
+                if (proj.full_desc) {
+                    modalFullDescSection.style.display = 'block';
+                    modalFullDesc.textContent = proj.full_desc.trim(); // .trim() removes leading/trailing whitespace
+                } else {
+                    modalFullDescSection.style.display = 'none';
+                }
+
+                if (proj.technologies) {
+                    modalTechSection.style.display = 'block';
+                    modalTechnologies.textContent = proj.technologies;
+                } else {
+                    modalTechSection.style.display = 'none';
+                }
+
+                if (proj.outcome) {
+                    modalOutcomeSection.style.display = 'block';
+                    modalOutcome.textContent = proj.outcome;
+                } else {
+                    modalOutcomeSection.style.display = 'none';
+                }
 
                 modal.style.display = 'block';
             }
