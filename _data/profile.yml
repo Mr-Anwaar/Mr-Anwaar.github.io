@@ -10,8 +10,7 @@ education:
   - degree: B.Sc. in Software Engineering
     institution: University of Kotli Azad Jammu & Kashmir
     year: 2019 – 2023
-    details: Graduated with a CGPA of 3.54/4.00. 
-    Final-year thesis project “SmartSync” leveraged GPT-3.5 and Llama2 for AI-driven automation in business workflows including text generation, translation, invoicing, and bulk email.
+    details: Graduated with a CGPA of 3.54/4.00. Final-year thesis project “SmartSync” leveraged GPT-3.5 and Llama2 for AI-driven automation in business workflows including text generation, translation, invoicing, and bulk email.
 
 experience:
   - title: Software Engineering Lecturer
@@ -24,7 +23,7 @@ experience:
 
   - title: ML/DL Researcher Intern (Remote)
     organization: Dr. Umair Tariq (Affiliated with Birmingham City University & Beijing University of Posts and Telecommunications)
-    period: Jan 2022 – Mar 2024
+    period: Jun 2022 – Mar 2024
     responsibilities:
       - Demonstrated proficiency in data analysis, computer vision, and image and text matching models.
       - Designed and implemented machine learning and deep learning models, extracting insights and solving complex problems to deliver impactful AI solutions.
@@ -88,7 +87,7 @@ certifications:
 publications:
   - title: Optimizing Retinal Vessel Segmentation Performance through a Systematic Comparison of Modified U-Net Variants
     authors: Haseeb Iqbal*, Waqas Ahmed†, Muhammad Anwaar†, Shaista Shabbir‡
-    venue:  accepted at Information Technology and Engineering (HITE'25)
+    venue: accepted at Information Technology and Engineering (HITE'25)
     link: "#" # Update with actual link when available
     summary: Introduced a novel U-Net-based deep learning framework enhanced by state-of-the-art encoder architectures (EfficientNetB0, VGG19, DenseNet169, ResNet152) for diabetic retinopathy diagnosis. Achieved 98.6% segmentation accuracy, 0.94 Dice Score, and 0.95 IOU using a hybrid FIVES and CHASE DB1 dataset, demonstrating superior capability in detecting retinal structures.
 
@@ -102,7 +101,7 @@ awards:
     description: Awarded for excellence in digital learning and skills development.
 
   - title: Letter of Recognition from Supervisor
-    year: 2024
+    year: 2023 # Corrected year based on previous conversation context
     description: Acknowledged for outstanding research performance and significant contributions during the research internship.
 
   - title: Lecturer Recognition Award
