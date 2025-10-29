@@ -8,7 +8,7 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
 <style>
   /* === Base Styles === */
   .profile-page {
-    max-width: 1200px;
+    max-width: 1200px; /* Reduced default max-width */
     margin: 2rem auto;
     padding: 3rem 2rem; /* Added horizontal padding */
     background: #fff;
@@ -68,7 +68,9 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
   /* Responsive grid for larger screens */
   @media (min-width: 769px) {
     .profile-page ul {
-        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Adjust minmax width as needed */
+        /* Allow up to 2 columns, but limit card width */
+        grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
+        /* max-width: 600px; */ /* Optional: Cap the width of each card more strictly */
     }
   }
 
@@ -78,6 +80,9 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
     border-radius: 10px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow for depth */
+    /* Optional: Set a max-width for individual list items on very large screens */
+    /* max-width: 600px; */
+    /* margin: 0 auto; */
   }
 
   .profile-page li:hover {
@@ -203,6 +208,33 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
     .profile-page .summary {
         font-size: 1rem;
         margin-bottom: 2rem; /* Adjusted margin */
+    }
+  }
+
+  /* === 4K and Ultra-Wide Screens (3840px and above) === */
+  @media (min-width: 3840px) {
+    .profile-page {
+      max-width: 1800px; /* Significantly increase max-width for 4K */
+      padding: 4rem 3rem; /* Increase padding for better spacing */
+    }
+    .profile-page h1 {
+      font-size: 3.5rem; /* Larger font size for 4K */
+    }
+    .profile-page h2 {
+      font-size: 2.2rem; /* Larger font size for 4K */
+    }
+    .profile-page .summary {
+      font-size: 1.4rem; /* Larger font size for 4K */
+      max-width: 1000px; /* Wider summary area on 4K */
+    }
+    .profile-page li {
+      padding: 1.8rem; /* Increase padding for 4K */
+      font-size: 1.1rem; /* Slightly larger text for readability */
+    }
+    .profile-page ul {
+        /* On 4K, allow more columns but cap individual card width */
+        grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
+        /* max-width: 650px; */ /* Optional: Further cap card width if needed */
     }
   }
 </style>
