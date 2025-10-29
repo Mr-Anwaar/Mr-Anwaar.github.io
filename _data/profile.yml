@@ -75,12 +75,6 @@ certifications:
     year: 2023
     description: Covered research ethics, academic writing, and reproducible methodologies in computing research.
 
-publications:
-   - title: Optimizing Retinal Vessel Segmentation Performance through Modified U-Net Variants
-    venue: Accepted at Conference (2025)
-    link: "#" # Update with actual link when available
-    summary: Built a deep learning framework for diabetic retinopathy detection using EfficientNetB0, VGG19, DenseNet169, and ResNet152 encoders — achieving 98.6% accuracy and 0.94 Dice score.
-
 awards:
   - title: Ehsaas Scholarship – HEC Pakistan
     year: 2019–2023
