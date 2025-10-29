@@ -1,5 +1,5 @@
 ---
-layout: default <!-- Or 'projects' if that's the intended layout, ensure the _layouts/projects.html file exists and is correct -->
+layout: default
 title: "Projects by Muhammad Anwaar - Data Science, AI, Software Engineering"
 permalink: /projects/
 description: "Explore projects by Muhammad Anwaar, a Data Scientist and Software Engineer. Browse software engineering, machine learning, deep learning, and AI projects showcasing expertise in Python, PyTorch, TensorFlow, and more."
@@ -240,9 +240,6 @@ description: "Explore projects by Muhammad Anwaar, a Data Scientist and Software
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Access the Jekyll-generated data object directly
-    const projectData = {{ site.data.projects | jsonify }};
-
     const projectCards = document.querySelectorAll('.project-card');
     const modal = document.getElementById('project-modal');
     const modalTitle = document.getElementById('modal-title');
@@ -259,39 +256,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     projectCards.forEach(card => {
         card.addEventListener('click', function() {
-            const projectId = parseInt(this.getAttribute('data-project-id')); // Ensure it's a number
-            const proj = projectData[projectId]; // Access the specific project using the ID
+            const projectId = this.getAttribute('data-project-id');
+            const project = {{ site.data.projects | jsonify }};
+            const proj = project[projectId];
 
             if (proj) {
-                // Populate main elements
                 modalTitle.textContent = proj.name;
                 modalImage.src = proj.img;
                 modalImage.alt = proj.name;
+                // Use the shorter description in the main body of the modal
                 modalDescription.textContent = proj.desc;
                 modalRepoLink.textContent = `https://github.com/${proj.gh_user}/${proj.repo}`;
                 modalRepoLink.href = `https://github.com/${proj.gh_user}/${proj.repo}`;
 
-                // --- Handle Detailed Fields ---
-                // Check if 'full_desc' exists and is not empty
-                if (proj.full_desc && proj.full_desc.trim() !== '') {
+                // Check for detailed fields and populate them if they exist
+                if (proj.full_desc) {
                     modalFullDescSection.style.display = 'block';
-                    // Note: .trim() might not work as expected on the raw string if it contains newlines from YAML's >
-                    // Jekyll usually handles the formatting correctly when outputting the JSON string.
-                    modalFullDesc.textContent = proj.full_desc; // Jekyll should handle newlines/whitespace correctly here
+                    modalFullDesc.textContent = proj.full_desc.trim(); // .trim() removes leading/trailing whitespace
                 } else {
                     modalFullDescSection.style.display = 'none';
                 }
 
-                // Check if 'technologies' exists and is not empty
-                if (proj.technologies && proj.technologies.trim() !== '') {
+                if (proj.technologies) {
                     modalTechSection.style.display = 'block';
                     modalTechnologies.textContent = proj.technologies;
                 } else {
                     modalTechSection.style.display = 'none';
                 }
 
-                // Check if 'outcome' exists and is not empty
-                if (proj.outcome && proj.outcome.trim() !== '') {
+                if (proj.outcome) {
                     modalOutcomeSection.style.display = 'block';
                     modalOutcome.textContent = proj.outcome;
                 } else {
@@ -299,8 +292,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 modal.style.display = 'block';
-            } else {
-                console.error('Project data not found for ID:', projectId);
             }
         });
     });
