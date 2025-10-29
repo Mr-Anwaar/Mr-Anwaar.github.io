@@ -5,10 +5,13 @@ permalink: /profile/
 description: "Explore the professional profile of Muhammad Anwaar, a Data Scientist and Software Engineer specializing in Machine Learning, Deep Learning, and AI research. Based in Pakistan, currently a Lecturer at the University of Kotli." # SEO meta description
 ---
 
+<!-- Include Animate.css from CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-5dMmgn86nlQlI7jYb3/6uA6DV/uq44zNKeP6aA6y83hPZ27EjQ7rJZlV1dUzFZ7UaKxL/6d65K67Y9nE331E0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <style>
   /* === Base Styles === */
   .profile-page {
-    max-width: 1200px; /* Reduced default max-width */
+    max-width: 1200px;
     margin: 2rem auto;
     padding: 3rem 2rem; /* Added horizontal padding */
     background: #fff;
@@ -26,6 +29,9 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
     color: #111;
     margin-bottom: 1.5rem; /* Reduced margin */
     letter-spacing: -0.5px;
+    /* Initial animation for the main heading */
+    opacity: 0;
+    animation: fadeInDown 1s ease-out forwards;
   }
 
   .profile-page .summary {
@@ -36,12 +42,18 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
       max-width: 800px; /* Constrain summary width */
       margin-left: auto;
       margin-right: auto;
+      /* Animation for the summary paragraph */
+      opacity: 0;
+      animation: fadeIn 1s ease-out 0.3s forwards;
   }
 
   .profile-page section {
     margin-bottom: 3rem;
     border-left: 4px solid #007acc;
     padding-left: 1.5rem;
+    /* Initial state for sections */
+    opacity: 0;
+    transform: translateY(20px);
   }
 
   .profile-page h2 {
@@ -51,6 +63,9 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
     display: flex;
     align-items: center;
     gap: 0.6rem;
+    /* Animation for section headings */
+    opacity: 0;
+    animation: fadeInLeft 0.8s ease-out forwards;
   }
 
   .profile-page p {
@@ -80,9 +95,8 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
     border-radius: 10px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow for depth */
-    /* Optional: Set a max-width for individual list items on very large screens */
-    /* max-width: 600px; */
-    /* margin: 0 auto; */
+    opacity: 0; /* Start invisible */
+    transform: translateY(10px); /* Slight offset */
   }
 
   .profile-page li:hover {
@@ -237,21 +251,26 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
         /* max-width: 650px; */ /* Optional: Further cap card width if needed */
     }
   }
+
+  /* Custom animation for list items with stagger delay */
+  .animate__staggered {
+      animation-delay: calc(0.1s * var(--item-index));
+  }
 </style>
 
 <div class="profile-page">
   <header>
-    <h1>📚 Academic & Research Profile</h1>
-    <p class="summary">{{ site.data.profile.summary }}</p> <!-- Display the summary -->
+    <h1 id="main-heading">📚 Academic & Research Profile</h1>
+    <p class="summary" id="summary-paragraph">{{ site.data.profile.summary }}</p> <!-- Display the summary -->
   </header>
 
   <article>
     <!-- Education -->
-    <section>
-      <h2>🎓 Education</h2>
+    <section class="animate__animated animate__fadeInUp" data-animate="fadeInUp">
+      <h2 id="education-heading">🎓 Education</h2>
       <ul>
         {% for edu in site.data.profile.education %}
-          <li>
+          <li class="animate__animated animate__fadeInUp animate__staggered" style="--item-index: {{ forloop.index }};">
             <p><strong>{{ edu.degree }}</strong><br>
             {{ edu.institution }} <span style="color:#555;">({{ edu.year }})</span><br>
             <em>{{ edu.details }}</em></p>
@@ -261,11 +280,11 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
     </section>
 
     <!-- Experience -->
-    <section>
-      <h2>💼 Experience</h2>
+    <section class="animate__animated animate__fadeInUp" data-animate="fadeInUp">
+      <h2 id="experience-heading">💼 Experience</h2>
       <ul>
         {% for exp in site.data.profile.experience %}
-          <li>
+          <li class="animate__animated animate__fadeInUp animate__staggered" style="--item-index: {{ forloop.index }};">
             <strong>{{ exp.title }}</strong> — {{ exp.organization }}
             <span style="color:#555;">({{ exp.period }})</span>
             <ul>
@@ -279,11 +298,11 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
     </section>
 
     <!-- Certifications -->
-    <section>
-      <h2>🏅 Certifications</h2>
+    <section class="animate__animated animate__fadeInUp" data-animate="fadeInUp">
+      <h2 id="certifications-heading">🏅 Certifications</h2>
       <ul>
         {% for cert in site.data.profile.certifications %}
-          <li>
+          <li class="animate__animated animate__fadeInUp animate__staggered" style="--item-index: {{ forloop.index }};">
             <strong><a href="{{ cert.link }}" target="_blank" rel="noopener noreferrer">{{ cert.title }}</a></strong> — {{ cert.issuer }}
             <span style="color:#555;">({{ cert.year }})</span>
             <em>{{ cert.description }}</em>
@@ -293,11 +312,11 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
     </section>
 
     <!-- Publications -->
-    <section>
-      <h2>🧠 Publications</h2>
+    <section class="animate__animated animate__fadeInUp" data-animate="fadeInUp">
+      <h2 id="publications-heading">🧠 Publications</h2>
       <ul>
         {% for pub in site.data.profile.publications %}
-          <li>
+          <li class="animate__animated animate__fadeInUp animate__staggered" style="--item-index: {{ forloop.index }};">
             <strong>{{ pub.title }}</strong> — {{ pub.venue }}<br>
             {% if pub.link != "#" %}
               <a href="{{ pub.link }}" target="_blank" rel="noopener noreferrer">🔗 View Paper</a><br>
@@ -310,11 +329,11 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
     </section>
 
     <!-- Awards -->
-    <section>
-      <h2>🏆 Awards</h2>
+    <section class="animate__animated animate__fadeInUp" data-animate="fadeInUp">
+      <h2 id="awards-heading">🏆 Awards</h2>
       <ul>
         {% for award in site.data.profile.awards %}
-          <li>
+          <li class="animate__animated animate__fadeInUp animate__staggered" style="--item-index: {{ forloop.index }};">
             <strong>{{ award.title }}</strong> <span style="color:#555;">({{ award.year }})</span>
             <em>{{ award.description }}</em>
           </li>
@@ -322,4 +341,36 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
       </ul>
     </section>
   </article>
+
+  <script>
+    // Simple Intersection Observer to trigger animations when sections come into view
+    document.addEventListener('DOMContentLoaded', function() {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const animatedElement = entry.target;
+                    // Get the animation class from data attribute
+                    const animationClass = animatedElement.getAttribute('data-animate') || 'fadeInUp';
+                    // Add the Animate.css class
+                    animatedElement.classList.add(`animate__${animationClass}`);
+                    animatedElement.classList.add('animate__animated');
+                    // Optionally, remove the observer after animation starts if it should only happen once
+                    // observer.unobserve(animatedElement);
+                }
+            });
+        }, {
+            threshold: 0.1, // Trigger when 10% of the element is visible
+            rootMargin: '0px 0px -50px 0px' // Adjust margin if needed
+        });
+
+        // Observe all sections and list items
+        document.querySelectorAll('.profile-page section, .profile-page ul li').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Observe main heading and summary separately if needed
+        // document.getElementById('main-heading').classList.add('animate__animated', 'animate__fadeInDown');
+        // document.getElementById('summary-paragraph').classList.add('animate__animated', 'animate__fadeIn');
+    });
+  </script>
 </div>
