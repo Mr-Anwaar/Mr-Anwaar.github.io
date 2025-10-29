@@ -1,13 +1,14 @@
 ---
 layout: default
-title: "Projects"
+title: "Projects by Muhammad Anwaar - Data Science, AI, Software Engineering"
 permalink: /projects/
+description: "Explore projects by Muhammad Anwaar, a Data Scientist and Software Engineer. Browse software engineering, machine learning, deep learning, and AI projects showcasing expertise in Python, PyTorch, TensorFlow, and more."
 ---
 
 <ul class="timeline projects-timeline">
 
   {% for project in site.data.projects %}
-  <li class="timeline-inverted project-card">
+  <li class="timeline-inverted project-card" data-project-id="{{ forloop.index0 }}">
     <div class="timeline-image">
       <img class="img-me" src="{{ project.img | prepend: site.baseurl }}" alt="{{ project.name }}">
     </div>
@@ -47,6 +48,17 @@ permalink: /projects/
 
 </ul>
 
+<!-- Modal Structure -->
+<div id="project-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modal-title"></h2>
+    <img id="modal-image" src="" alt="" style="width: 100%; max-height: 300px; object-fit: cover; margin-bottom: 15px;">
+    <p id="modal-description"></p>
+    <p><strong>Repository:</strong> <a id="modal-repo-link" href="#" target="_blank"></a></p>
+  </div>
+</div>
+
 <style>
 /* ===== PROJECT TIMELINE PAGE ===== */
 .projects-timeline {
@@ -58,6 +70,7 @@ permalink: /projects/
 
 .project-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Indicate clickable */
 }
 
 .project-card:hover {
@@ -141,4 +154,99 @@ permalink: /projects/
   .project-title { font-size: 1.1rem; }
   .project-desc { font-size: 0.9rem; }
 }
+
+/* ===== MODAL STYLES ===== */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+}
+
+#modal-title {
+  margin-top: 0;
+  color: #1d3557;
+}
+
+#modal-description {
+  color: #333;
+  line-height: 1.6;
+}
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const projectCards = document.querySelectorAll('.project-card');
+    const modal = document.getElementById('project-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalImage = document.getElementById('modal-image');
+    const modalDescription = document.getElementById('modal-description');
+    const modalRepoLink = document.getElementById('modal-repo-link');
+    const closeBtn = document.querySelector('.close');
+
+    projectCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const projectId = this.getAttribute('data-project-id');
+            const project = {{ site.data.projects | jsonify }};
+            const proj = project[projectId];
+
+            if (proj) {
+                modalTitle.textContent = proj.name;
+                modalImage.src = proj.img;
+                modalImage.alt = proj.name;
+                modalDescription.textContent = proj.desc;
+                modalRepoLink.textContent = `https://github.com/${proj.gh_user}/${proj.repo}`;
+                modalRepoLink.href = `https://github.com/${proj.gh_user}/${proj.repo}`;
+
+                modal.style.display = 'block';
+            }
+        });
+    });
+
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
+</script>
