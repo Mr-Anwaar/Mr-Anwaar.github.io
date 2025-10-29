@@ -1,7 +1,7 @@
 # _data/profile.yml
 
 # SEO-optimized summary highlighting core skills and value proposition
-summary: >
+summary:
   Data Scientist and Software Engineer with expertise in machine learning, deep learning, and scalable software development.
   Proven experience in AI research, data analysis, and delivering innovative solutions. Currently a Lecturer at the University of Kotli,
   integrating cutting-edge AI into the Software Engineering curriculum.
@@ -9,7 +9,7 @@ summary: >
 education:
   - degree: B.Sc. in Software Engineering
     institution: University of Kotli Azad Jammu & Kashmir
-    year: 2019 – 2023 # Standard hyphen used
+    year: 2019 - 2023 # Changed to standard ASCII hyphen
     details: Graduated with a CGPA of 3.54/4.00. Final-year thesis project “SmartSync” leveraged GPT-3.5 and Llama2 for AI-driven automation in business workflows including text generation, translation, invoicing, and bulk email.
 
 experience:
@@ -93,7 +93,7 @@ publications:
 
 awards:
   - title: Ehsaas Scholarship – HEC Pakistan
-    year: 2019–2023
+    year: 2019 - 2023 # Changed to standard ASCII hyphen
     description: Recognized by the Government of Pakistan for outstanding academic performance and excellence during the Bachelor of Science in Software Engineering program.
 
   - title: Digital Learning & Skills Enrichment Initiative (DLSEI) Scholarship
