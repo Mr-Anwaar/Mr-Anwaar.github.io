@@ -34,46 +34,62 @@ certifications:
     issuer: Stanford University & DeepLearning.AI (Coursera)
     year: 2023
     description: Expertise in building and training ML models, including supervised, unsupervised, and deep learning techniques.
+    link: "https://coursera.org/verify/specialization/75G2VUG6KD94"
 
   - title: Natural Language Processing with Classification and Vector Spaces
     issuer: DeepLearning.AI (Coursera)
     year: 2023
     description: Covered text preprocessing, embeddings, and transformer architectures for NLP tasks.
+    link: "https://coursera.org/verify/SM49PWLEMKTD"
 
   - title: Python for Data Science and AI
     issuer: IBM (Coursera)
     year: 2023
     description: Hands-on training in Python libraries (Pandas, NumPy, Scikit-learn) for data manipulation, analysis, and visualization.
+    link: "https://coursera.org/verify/KZHWWVXQ2UVP"
 
   - title: Data Science Methodology
     issuer: IBM (Coursera)
     year: 2023
     description: End-to-end data science lifecycle—from problem framing to deployment and feedback loops.
+    link: "https://coursera.org/verify/GECABZUY5TNF"
 
   - title: Programming for Everybody (Getting Started with Python)
     issuer: University of Michigan (Coursera)
     year: 2023
     description: Foundational Python programming for beginners, emphasizing problem-solving and automation.
+    link: "https://coursera.org/verify/8JU94MVNK82A"
 
   - title: An Intuitive Introduction to Probability
     issuer: University of Zurich (Coursera)
     year: 2023
     description: Applied probability theory for data-driven decision-making and statistical modeling.
+    link: "https://coursera.org/verify/2FB42PMDHG7K"
 
   - title: AI For Everyone
     issuer: DeepLearning.AI (Coursera)
     year: 2023
     description: Strategic understanding of AI capabilities, limitations, and real-world business impact.
+    link: "https://coursera.org/verify/JQX7NX4MTCCZ"
 
   - title: Introduction to Cybersecurity
     issuer: Cisco
     year: 2022
     description: Fundamentals of network security, threats, and protective measures.
+    link: "https://www.credly.com/badges/f91a49a9-d6f5-42a3-bcbf-314b75907b89"
 
   - title: Being a Researcher in Information Science and Technology
     issuer: Politecnico di Milano
     year: 2023
     description: Covered research ethics, academic writing, and reproducible methodologies in computing research.
+    link: "https://coursera.org/verify/S6J77TRQ8NBB"
+
+publications:
+  - title: Optimizing Retinal Vessel Segmentation Performance through a Systematic Comparison of Modified U-Net Variants
+    authors: Haseeb Iqbal*, Waqas Ahmed†, Muhammad Anwaar†, Shaista Shabbir‡
+    venue: HITE'25
+    link: "#" # Update with actual link when available
+    summary: Introduced a novel U-Net-based deep learning framework enhanced by state-of-the-art encoder architectures (EfficientNetB0, VGG19, DenseNet169, ResNet152) for diabetic retinopathy diagnosis. Achieved 98.6% segmentation accuracy, 0.94 Dice Score, and 0.95 IOU using a hybrid FIVES and CHASE DB1 dataset, demonstrating superior capability in detecting retinal structures.
 
 awards:
   - title: Ehsaas Scholarship – HEC Pakistan
@@ -87,3 +103,7 @@ awards:
   - title: Letter of Recognition from Supervisor
     year: 2023
     description: Acknowledged for outstanding research performance and significant contributions during the research internship.
+
+  - title: Lecturer Recognition Award
+    year: 2025
+    description: Honored for excellence in teaching and integrating AI concepts into the Software Engineering curriculum.
