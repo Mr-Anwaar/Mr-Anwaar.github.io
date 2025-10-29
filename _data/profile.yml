@@ -1,55 +1,95 @@
 # _data/profile.yml
 
+# SEO-optimized summary highlighting core skills and value proposition
+summary: >
+  Data Scientist and Software Engineer with expertise in machine learning, deep learning, and scalable software development.
+  Proven experience in AI research, data analysis, and delivering innovative solutions. Currently a Lecturer at the University of Kotli,
+  integrating cutting-edge AI into the Software Engineering curriculum.
+
 education:
   - degree: B.Sc. in Software Engineering
     institution: University of Kotli Azad Jammu & Kashmir
     year: 2019 – 2023
-    details: Graduated with a CGPA of 3.54/4.00. Final-year project focused on SmartSync.
+    details: Graduated with a CGPA of 3.54/4.00. Final-year thesis project “SmartSync” leveraged GPT-3.5 and Llama2 for AI-driven automation in business workflows including text generation, translation, invoicing, and bulk email.
 
 experience:
-  - title: Lecturer — Software Engineering Department
+  - title: Software Engineering Lecturer
     organization: University of Kotli Azad Jammu & Kashmir
-    period: Sep 2024 – Present
+    period: Feb 2025 – Present
     responsibilities:
-      - Teaching Cloud Computing, Software Engineering, Cloud Scalable System Design, and Best Engineering Practices.
-      - Guiding students to apply theory to real-world systems.
-      - Integrating AI and data-driven practices into the curriculum.
+      - Teaching core courses including Software Engineering and Cloud Computing.
+      - Covering modern topics such as cloud platforms, scalable system design, microservices, DevOps practices, and enhancing software reliability.
+      - Delivering industry-aligned education that empowers students with essential, practical problem-solving skills.
 
-  - title: Research Intern
-    organization: Beijing University of Posts and Telecommunications (BUPT)
-    period: 2022
+  - title: ML/DL Researcher Intern (Remote)
+    organization: Dr. Umair Tariq (Affiliated with Birmingham City University & Beijing University of Posts and Telecommunications)
+    period: Jun 2022 – Mar 2024
     responsibilities:
-      - Conducted research on classification, segmentation, and transformer architectures.
-      - Developed data pipelines and preprocessing workflows.
-      - Received a recommendation letter for outstanding performance.
+      - Demonstrated proficiency in data analysis, computer vision, and image and text matching models.
+      - Designed and implemented machine learning and deep learning models, extracting insights and solving complex problems to deliver impactful AI solutions.
+      - Applied expertise in Python for deep learning with strong analytical abilities and innovative problem-solving.
 
 certifications:
-  - title: Deep Learning Specialization
+  - title: Machine Learning Specialization
+    issuer: Stanford University & DeepLearning.AI (Coursera)
+    year: 2023
+    description: Expertise in building and training ML models, including supervised, unsupervised, and deep learning techniques.
+
+  - title: Natural Language Processing with Classification and Vector Spaces
     issuer: DeepLearning.AI (Coursera)
     year: 2023
-    description: Covered CNNs, RNNs, and sequence models in a 5-course specialization.
+    description: Covered text preprocessing, embeddings, and transformer architectures for NLP tasks.
 
-  - title: Natural Language Processing Specialization
-    issuer: Coursera
+  - title: Python for Data Science and AI
+    issuer: IBM (Coursera)
     year: 2023
-    description: Covered text preprocessing, embeddings, and transformer architectures.
+    description: Hands-on training in Python libraries (Pandas, NumPy, Scikit-learn) for data manipulation, analysis, and visualization.
 
-  - title: Cloud Computing Foundations
-    issuer: Coursera
-    year: 2024
-    description: Learned scalable system design and best engineering practices.
+  - title: Data Science Methodology
+    issuer: IBM (Coursera)
+    year: 2023
+    description: End-to-end data science lifecycle—from problem framing to deployment and feedback loops.
+
+  - title: Programming for Everybody (Getting Started with Python)
+    issuer: University of Michigan (Coursera)
+    year: 2023
+    description: Foundational Python programming for beginners, emphasizing problem-solving and automation.
+
+  - title: An Intuitive Introduction to Probability
+    issuer: University of Zurich (Coursera)
+    year: 2023
+    description: Applied probability theory for data-driven decision-making and statistical modeling.
+
+  - title: AI For Everyone
+    issuer: DeepLearning.AI (Coursera)
+    year: 2023
+    description: Strategic understanding of AI capabilities, limitations, and real-world business impact.
+
+  - title: Introduction to Cybersecurity
+    issuer: Cisco
+    year: 2022
+    description: Fundamentals of network security, threats, and protective measures.
+
+  - title: Being a Researcher in Information Science and Technology
+    issuer: Politecnico di Milano
+    year: 2023
+    description: Covered research ethics, academic writing, and reproducible methodologies in computing research.
 
 publications:
-  - title: Optimizing Retinal Vessel Segmentation Performance through Modified U-Net Variants
+   - title: Optimizing Retinal Vessel Segmentation Performance through Modified U-Net Variants
     venue: Accepted at Conference (2025)
-    link: "#"
+    link: "#" # Update with actual link when available
     summary: Built a deep learning framework for diabetic retinopathy detection using EfficientNetB0, VGG19, DenseNet169, and ResNet152 encoders — achieving 98.6% accuracy and 0.94 Dice score.
 
 awards:
-  - title: Recommendation Letter from BUPT Supervisor
-    year: 2023
-    description: Recognized for excellence in data science research and leadership.
+  - title: Ehsaas Scholarship – HEC Pakistan
+    year: 2019–2023
+    description: Recognized by the Government of Pakistan for outstanding academic performance and excellence during the Bachelor of Science in Software Engineering program.
 
-  - title: Lecturer Recognition Award
-    year: 2025
-    description: Honored for excellence in teaching and integrating AI concepts into Software Engineering.
+  - title: Digital Learning & Skills Enrichment Initiative (DLSEI) Scholarship
+    year: 2023
+    description: Awarded for excellence in digital learning and skills development.
+
+  - title: Letter of Recognition from Supervisor
+    year: 2023
+    description: Acknowledged for outstanding research performance and significant contributions during the research internship.
