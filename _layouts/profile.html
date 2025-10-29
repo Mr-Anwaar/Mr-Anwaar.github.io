@@ -150,6 +150,9 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
     .profile-page h2 {
       font-size: 1.6rem;
     }
+    .profile-page li {
+      padding: 1.2rem; /* Adjusted padding */
+    }
   }
 
   /* === Laptops & Medium Screens (1024px and below) === */
@@ -165,7 +168,8 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
       font-size: 1.5rem;
     }
     .profile-page li {
-      padding: 1.2rem; /* Adjusted padding */
+      font-size: 0.95rem;
+      padding: 1.1rem; /* Adjusted padding */
     }
   }
 
@@ -349,13 +353,19 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const animatedElement = entry.target;
-                    // Get the animation class from data attribute
+                    // Get the animation class from data attribute or default
                     const animationClass = animatedElement.getAttribute('data-animate') || 'fadeInUp';
                     // Add the Animate.css class
                     animatedElement.classList.add(`animate__${animationClass}`);
                     animatedElement.classList.add('animate__animated');
-                    // Optionally, remove the observer after animation starts if it should only happen once
-                    // observer.unobserve(animatedElement);
+                    // Add staggered animation to child list items if they exist
+                    const listItems = animatedElement.querySelectorAll('li');
+                    if (listItems.length > 0) {
+                        listItems.forEach((item, index) => {
+                            item.style.setProperty('--item-index', index);
+                            item.classList.add('animate__fadeInUp', 'animate__staggered');
+                        });
+                    }
                 }
             });
         }, {
@@ -369,8 +379,8 @@ description: "Explore the professional profile of Muhammad Anwaar, a Data Scient
         });
 
         // Observe main heading and summary separately if needed
-        document.getElementById('main-heading').classList.add('animate__animated', 'animate__fadeInDown');
-        document.getElementById('summary-paragraph').classList.add('animate__animated', 'animate__fadeIn');
+        // document.getElementById('main-heading').classList.add('animate__animated', 'animate__fadeInDown');
+        // document.getElementById('summary-paragraph').classList.add('animate__animated', 'animate__fadeIn');
     });
   </script>
 </div>
