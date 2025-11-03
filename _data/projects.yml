@@ -12,11 +12,6 @@
   technologies: "PyTorch, U-Net (Encoder-Decoder), NumPy, OpenCV, TorchVision, Matplotlib, Seaborn, Google Colab"
   outcome: "Implemented U-Net for semantic segmentation, used real-world dataset (Massachusetts Roads), achieved clear road network segmentation."
 
-- name: Keycloak Dockerfile with SSH
-  gh_user: Muhammad Anwaar
-  repo: keycloakssh
-  img: https://user-images.githubusercontent.com/32843441/147859397-a1dbc63b-c58f-4536-ae8a-d51e17aa08ce.png
-  desc: "A custom Dockerfile for Keycloak with SSH access enabled, useful for debugging and development."
 
 - name: Jekyll Theme
   gh_user: Muhammad Anwaar
@@ -24,10 +19,5 @@
   img: https://raw.githubusercontent.com/MuhammadAnwaar/jekyll-uno-timeline/master/screenshot-overview.png
   desc: "A Jekyll theme based on Uno, featuring a project timeline. Serves as a developer's business card."
 
-- name: Face API
-  gh_user: ArvatoSystems
-  repo: FaceApiWPF
-  img: https://raw.githubusercontent.com/ArvatoSystems/FaceApiWPF/master/FaceApiWPFScreenshot.png
-  desc: "A WPF application demonstrating the use of a Face API for facial recognition tasks."
 
 
