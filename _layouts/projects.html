@@ -16,9 +16,9 @@ description: "Explore projects by Muhammad Anwaar, a Data Scientist and Software
     <div class="timeline-panel">
       <div class="timeline-heading">
         <h3 class="project-title">
-         <!-- <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank">-->
+         <!-- <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank"> </a> -->
             {{ project.name }}
-          </a>
+
         </h3>
         {% if project.year %}
         <p class="project-year">{{ project.year }}</p>
@@ -30,17 +30,20 @@ description: "Explore projects by Muhammad Anwaar, a Data Scientist and Software
           <p class="project-desc">{{ project.desc }}</p>
         {% endif %}
 
-        <div class="project-links">
-          <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers" title="Stars">
-            <i class="fa fa-star"></i><span class="stat"> Stars</span>
-          </a>
-          <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network" title="Forks">
-            <i class="fa fa-code-fork"></i><span class="stat"> Forks</span>
-          </a>
-          <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/watchers" title="Watchers">
-            <i class="far fa-eye"></i><span class="stat"> Watchers</span>
-          </a>
-        </div>
+        <div class="project-links ghbtn"
+     user="{{ project.gh_user }}"
+     repo="{{ project.repo }}">
+  <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers" title="Stars">
+    <i class="fa fa-star"></i><span class="star"> ...</span>
+  </a>
+  <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network" title="Forks">
+    <i class="fa fa-code-fork"></i><span class="fork"> ...</span>
+  </a>
+  <a target="_blank" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/watchers" title="Watchers">
+    <i class="far fa-eye"></i><span class="watchers"> ...</span>
+  </a>
+</div>
+
       </div>
     </div>
   </li>
@@ -305,5 +308,35 @@ document.addEventListener('DOMContentLoaded', function() {
             modal.style.display = 'none';
         }
     });
+});
+</script>
+<script>
+console.log("GitHub stats updater loaded");
+
+$(document).ready(function() {
+  let repos = [];
+
+  $(".ghbtn").each(function() {
+    const user = $(this).attr("user");
+    const repo = $(this).attr("repo");
+    repos.push({ user, repo });
+  });
+
+  repos.forEach(r => {
+    const apiUrl = `https://api.github.com/repos/${r.user}/${r.repo}`;
+    $.ajax({
+      type: "GET",
+      url: apiUrl,
+      dataType: "json",
+      success: function(data) {
+        $(`.ghbtn[repo='${data.name}']`).find(".star").html("&nbsp;" + data.stargazers_count);
+        $(`.ghbtn[repo='${data.name}']`).find(".fork").html("&nbsp;" + data.forks_count);
+        $(`.ghbtn[repo='${data.name}']`).find(".watchers").html("&nbsp;" + data.watchers_count);
+      },
+      error: function(xhr, status, error) {
+        console.error(`GitHub API error for ${r.user}/${r.repo}:`, error);
+      }
+    });
+  });
 });
 </script>
