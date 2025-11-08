@@ -2,7 +2,7 @@
 - name: Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection
   gh_user: Mr-Anwaar
   repo: Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection
-  img: "https://github.com/Mr-Anwaar/Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection/blob/main/assets/sample_mask.png"
+  img: "https://raw.githubusercontent.com/Mr-Anwaar/Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection/main/assets/sample_mask.png"
   desc: "A PyTorch implementation of the U-Net architecture for semantic segmentation of roads in aerial imagery."
   full_desc: >
     This project demonstrates **aerial image segmentation using a U-Net architecture implemented in PyTorch**.
@@ -13,11 +13,18 @@
   outcome: "Implemented U-Net for semantic segmentation, used real-world dataset (Massachusetts Roads), achieved clear road network segmentation."
 
 
-- name: Jekyll Theme
-  gh_user: Muhammad Anwaar
-  repo: jekyll-uno-timeline
-  img: https://raw.githubusercontent.com/MuhammadAnwaar/jekyll-uno-timeline/master/screenshot-overview.png
-  desc: "A Jekyll theme based on Uno, featuring a project timeline. Serves as a developer's business card."
+- name: "Personal Portfolio – Jekyll Theme"
+  gh_user: "Mr-Anwaar"
+  repo: "Mr-Anwaar.github.io"
+  img: "https://raw.githubusercontent.com/Mr-Anwaar/Mr-Anwaar.github.io/main/images/profile1.png"
+  desc: "A custom Jekyll portfolio theme based on Uno, featuring a responsive project timeline and developer-focused layout. Serves as a professional business card and project showcase."
+  full_desc: >
+    This is the source code for my personal portfolio site, built with Jekyll and customized from the Uno theme.
+    It features a clean, minimalist design with a chronological project timeline, SEO-friendly structure,
+    and responsive layout optimized for developers, researchers, and educators.
+    The site is statically generated, fast, and hosted for free on GitHub Pages.
+  technologies: "Jekyll, HTML5, CSS3, Liquid, GitHub Pages, Markdown, Responsive Web Design"
+  outcome: "Created a lightweight, maintainable, and professional online presence that highlights projects, skills, and contact information—all without a CMS or backend."
 
 - name: "SmartSync — AI-Powered Business Automation Suite"
   gh_user: "Mr-Anwaar"
@@ -47,7 +54,7 @@
 - name: "MeetMetrics — Comparative Analysis of Meeting Applications Resource Consumption"
   gh_user: "Mr-Anwaar"
   repo: "MeetMetrics-Comparative-Analysis-of-Meeting-Applications-Resource-Consumption"
-  img: "https://raw.githubusercontent.com/Mr-Anwaar/MeetMetrics-Comparative-Analysis-of-Meeting-Applications-Resource-Consumption/main/assets/meetmetrics-banner.png"
+  img: "https://raw.githubusercontent.com/Mr-Anwaar/MeetMetrics-Comparative-Analysis-of-Meeting-Applications-Resource-Consumption/main/meetmetrics.png"
   desc: "A performance benchmarking study comparing CPU, memory, and network usage of Zoom, Microsoft Teams, Google Meet, and Discord during video calls."
   full_desc: >
     MeetMetrics is a systematic resource consumption analysis of popular video conferencing tools under controlled conditions.
