@@ -54,7 +54,7 @@
 - name: "MeetMetrics — Comparative Analysis of Meeting Applications Resource Consumption"
   gh_user: "Mr-Anwaar"
   repo: "MeetMetrics-Comparative-Analysis-of-Meeting-Applications-Resource-Consumption"
-  img: "https://raw.githubusercontent.com/Mr-Anwaar/MeetMetrics-Comparative-Analysis-of-Meeting-Applications-Resource-Consumption/main/meetmetrics.png"
+  img: "https://raw.githubusercontent.com/Mr-Anwaar/MeetMetrics-Comparative-Analysis-of-Meeting-Applications-Resource-Consumption/main/meetmetrics.jpeg"
   desc: "A performance benchmarking study comparing CPU, memory, and network usage of Zoom, Microsoft Teams, Google Meet, and Discord during video calls."
   full_desc: >
     MeetMetrics is a systematic resource consumption analysis of popular video conferencing tools under controlled conditions.
