@@ -19,5 +19,40 @@
   img: https://raw.githubusercontent.com/MuhammadAnwaar/jekyll-uno-timeline/master/screenshot-overview.png
   desc: "A Jekyll theme based on Uno, featuring a project timeline. Serves as a developer's business card."
 
+- name: "SmartSync — AI-Powered Business Automation Suite"
+  gh_user: "Mr-Anwaar"
+  repo: "SmartSync"
+  img: "https://raw.githubusercontent.com/Mr-Anwaar/SmartSync/main/docs/images/dashboard.jpg"
+  desc: "A full-stack SaaS platform for AI-driven blog generation, multilingual translation, invoicing, and self-hosted bulk email automation with attachments."
+  full_desc: >
+    SmartSync is a production-ready Django SaaS application that empowers freelancers and SMEs with AI-powered business automation.
+    It integrates GPT-3.5 and supports custom LLMs via vLLM, enabling users to generate blogs, translate text, create branded invoices,
+    and send scheduled bulk emails—all with zero recurring cost. The email system is fully self-hosted using SMTP + Celery + Redis,
+    with support for file attachments and CSV-based recipient lists. Designed for data privacy, scalability, and enterprise-grade reliability.
+  technologies: "Python, Django, GPT-3.5 API, vLLM, Redis, Celery, SQLite, HTML5, CSS3, JavaScript, Bootstrap 5, SMTP"
+  outcome: "Built a complete AI automation suite with dual LLM backend, self-hosted email with attachments, and scalable asynchronous task processing."
 
+- name: "Climate Change News Aggregator API"
+  gh_user: "Mr-Anwaar"
+  repo: "Climate_Change-News-Aggregator-API"
+  img: "https://raw.githubusercontent.com/Mr-Anwaar/Climate_Change-News-Aggregator-API/main/assets/climate-api-banner.png"
+  desc: "A lightweight Node.js REST API that scrapes real-time climate change news from The Guardian, The Times, and The Telegraph."
+  full_desc: >
+    This API aggregates climate-focused journalism from trusted UK media outlets into a developer-friendly JSON format.
+    Built with Node.js, Express, Axios, and Cheerio, it enables researchers, educators, and sustainability projects to access structured
+    environmental news data without paywalls or complex integrations. Features live scraping, source filtering, and minimal dependencies.
+  technologies: "Node.js, Express, Axios, Cheerio, REST API, Web Scraping, JavaScript"
+  outcome: "Delivered a reliable, ethical news aggregation tool for climate awareness, research, and educational use—fully open."
 
+- name: "MeetMetrics — Comparative Analysis of Meeting Applications Resource Consumption"
+  gh_user: "Mr-Anwaar"
+  repo: "MeetMetrics-Comparative-Analysis-of-Meeting-Applications-Resource-Consumption"
+  img: "https://raw.githubusercontent.com/Mr-Anwaar/MeetMetrics-Comparative-Analysis-of-Meeting-Applications-Resource-Consumption/main/assets/meetmetrics-banner.png"
+  desc: "A performance benchmarking study comparing CPU, memory, and network usage of Zoom, Microsoft Teams, Google Meet, and Discord during video calls."
+  full_desc: >
+    MeetMetrics is a systematic resource consumption analysis of popular video conferencing tools under controlled conditions.
+    Using system monitoring utilities and standardized test scenarios, this project measures CPU load, RAM usage, and network bandwidth
+    across Zoom, Microsoft Teams, Google Meet, and Discord. Results are visualized to help users and organizations make informed decisions
+    based on hardware constraints, energy efficiency, and performance trade-offs.
+  technologies: "Python, psutil, matplotlib, pandas, Bash scripting, system monitoring, data visualization"
+  outcome: "Produced actionable insights on meeting app efficiency, revealing significant differences in resource usage across platforms under identical conditions."
