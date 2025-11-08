@@ -2,7 +2,7 @@
 - name: Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection
   gh_user: Mr-Anwaar
   repo: Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection
-  img: "https://raw.githubusercontent.com/Mr-Anwaar/Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection/main/assets/sample_mask.png"
+  img: "https://raw.githubusercontent.com/Mr-Anwaar/Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection/main/assets/Arial_Image_Segmentation.png"
   desc: "A PyTorch implementation of the U-Net architecture for semantic segmentation of roads in aerial imagery."
   full_desc: >
     This project demonstrates **aerial image segmentation using a U-Net architecture implemented in PyTorch**.
