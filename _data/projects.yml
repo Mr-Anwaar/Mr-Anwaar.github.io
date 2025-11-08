@@ -2,7 +2,7 @@
 - name: Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection
   gh_user: Mr-Anwaar
   repo: Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection
-  img: https://github.com/Mr-Anwaar/Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection/blob/main/assets/sample_mask.png
+  img: "https://github.com/Mr-Anwaar/Aerial-Image-Segmentation-with-PyTorch-U-Net-for-Road-Detection/blob/main/assets/sample_mask.png"
   desc: "A PyTorch implementation of the U-Net architecture for semantic segmentation of roads in aerial imagery."
   full_desc: >
     This project demonstrates **aerial image segmentation using a U-Net architecture implemented in PyTorch**.
@@ -22,7 +22,7 @@
 - name: "SmartSync — AI-Powered Business Automation Suite"
   gh_user: "Mr-Anwaar"
   repo: "SmartSync"
-  img: "https://raw.githubusercontent.com/Mr-Anwaar/SmartSync/main/docs/images/dashboard.jpg"
+  img: "https://raw.githubusercontent.com/Mr-Anwaar/SmartSync/main/docs/images/dashboard.png"
   desc: "A full-stack SaaS platform for AI-driven blog generation, multilingual translation, invoicing, and self-hosted bulk email automation with attachments."
   full_desc: >
     SmartSync is a production-ready Django SaaS application that empowers freelancers and SMEs with AI-powered business automation.
