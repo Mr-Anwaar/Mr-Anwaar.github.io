@@ -35,7 +35,7 @@
 - name: "Climate Change News Aggregator API"
   gh_user: "Mr-Anwaar"
   repo: "Climate_Change-News-Aggregator-API"
-  img: "https://www.github.com/Mr-Anwaar/Climate_Change-News-Aggregator-API/blob/main/ClimateChangeNews.jpeg"
+  img: "https://raw.githubusercontent.com/Mr-Anwaar/Climate_Change-News-Aggregator-API/main/assets/images/ClimateChangeNews.jpeg"
   desc: "A lightweight Node.js REST API that scrapes real-time climate change news from The Guardian, The Times, and The Telegraph."
   full_desc: >
     This API aggregates climate-focused journalism from trusted UK media outlets into a developer-friendly JSON format.
